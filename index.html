@@ -7,11 +7,20 @@
       a { 
         color: red;
       }
-      div {
+      #exec-bio {
+        background-color: lightgray;
+      }
+      .bio-box {
         border: 1px solid black;
       }
-      div a {
+      .bio-box a {
         color: green;
+      }
+      .diff-box {
+        background-color: azure;
+      }
+      #first-link{
+        background-color: orange;
       }
     </style>
   </head>
@@ -19,7 +28,7 @@
     <h1>I'm an h1</h1>
     <ul>
       <li>
-        <a href="http://example.com/">Link</a>
+        <a id="first-link" href="http://example.com/">Link</a>
       </li>
       <li>
         <a href="http://example.com/">Link</a>
@@ -29,16 +38,16 @@
       </li>
     </ul>
     <h2>I'm an h2</h2>
-    <div>
+    <div id="exec-bio" class="bio-box">
       <a href="http://example.com/">I'm a link</a>
     </div>
-    <div>
+    <div class="bio-box diff-box">
       <a href="http://example.com/">I'm a link</a>
     </div>
-    <div>
+    <div class="bio-box">
       <a href="http://example.com/">I'm a link</a>
     </div>
-    <div>
+    <div class="bio-box">
       <a href="http://example.com/">I'm a link</a>
     </div>
   </body>
