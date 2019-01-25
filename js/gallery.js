@@ -4,9 +4,13 @@ function activateGallery() {
 	let mainImage 	= document.querySelector("#gallery-photo img")
 
 	thumbnails.forEach(function(thumbnail) {
+		// Preload large images
+		let newImageSrc 	= thumbnail.dataset.largeVersion;
+		let largeVersion 	= new Image();
+		largeVersion.src 	= newImageSrc;
+
 		thumbnail.addEventListener("click", function() {
 			// set clicked image as main image
-			let newImageSrc = thumbnail.dataset.largeVersion;
 			let altImage 	= thumbnail.dataset.title;
 			mainImage.setAttribute("src", newImageSrc);
 			mainImage.setAttribute("alt", altImage);
